@@ -9,6 +9,6 @@ Tech stack considered:
 - Database: MongoDB
 
   To do:
-  - Landing/Home page for user to search stocks
+  - Landing/Home page for user to search stocks ✅
   - Retrieve stock information from external API upon user search
     
