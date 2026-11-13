@@ -1,1 +1,148 @@
 @import "tailwindcss";
+
+:root{
+    color-scheme: dark;
+
+    /*Colours from current colour theme*/
+
+    --bg: #0a0c0b;
+    --nav: #0f1110;
+    --surface: #131514;
+    --border: #1e2220;
+    --pill: #1a1c1b;
+    --emerald: #10b981;
+    --emerald-light: #2cd098;
+    --danger: #dc2626;
+    --text: #ffffff;
+    --soft: #c4cbc8;
+    --muted: #9aa5a0;
+
+}
+
+body{
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+:focus-visible{
+    outline: 2px solid var(--emerald);
+    outline-offset: 2px;
+}
+
+.page{
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    place-items: center;
+    padding: 1.5rem;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--nav);
+    border-bottom: 1px solid var(--border);
+}
+
+.stockSearch-brand{
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--emerald);
+}
+
+.navBar{
+    scrollbar-width: none;
+}
+
+.navBarLinks{
+    display: flex;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.linkOnNavBar{
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--soft);
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 999px;
+}
+
+.linkOnNavBar:hover{
+    color: var(--text);
+}
+
+.linkOnNavBar[aria-current='page']{
+    background: var(--pill);
+    color: var(--emerald);
+}
+
+
+.main-search{
+   width: min(640px, 100%);
+}
+
+.search-stock-form{
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 999px;
+}
+
+.search-stock-form:focus-within{
+    border-color:var(--emerald);
+}
+
+.search-input{
+    flex: 1;
+    min-width: 0;
+    padding: 0 1.25rem;
+    font-size: 1.125rem;
+    color: var(--text);
+    caret-color: var(--emerald);
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+
+.search-input::placeholder{
+    color: var(--muted);
+}
+
+.search-stock-btn{
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #04130d;
+    background: var(--emerald);
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.search-stock-btn:hover{
+    background: var(--emerald-light);
+}
