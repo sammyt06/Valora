@@ -1,5 +1,5 @@
 # Valora
-Currently in planning/starting phase!
+Currently under development!
 
 Phase 1:
 Tech stack considered:
