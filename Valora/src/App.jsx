@@ -8,12 +8,28 @@ const App = () => {
   const [query, setQuery] = useState('')
   const [activeLink, setActiveLink] = useState('Home')
 
+  const API_KEY = import.meta.env.VITE_FINNHUB_KEY
+
   //Handling the submit request
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
-    //Stock search ran here (to be completed)
+    //Stock search ran here
     console.log('Searching for:', query.trim())
+
+    //Formatting symbol correctly
+    const symbol = query.trim().toUpperCase()
+    if (!symbol) return
+
+    //pauses function until answer arrives
+    const res = await fetch(
+      `https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(symbol)}&token=${API_KEY}`
+    )
+
+    //turn the response body into a JavaScript object
+    const data = await res.json()
+    console.log(data)
+
   }
 
   return(
