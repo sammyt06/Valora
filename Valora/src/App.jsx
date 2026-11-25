@@ -112,7 +112,7 @@ const App = () => {
             type='text' 
             autoComplete='off'
             spellCheck='false'
-            placeholder='Search for a stock' 
+            placeholder='Search for a stock (symbol)' 
             value={query} 
             onChange={(e) => setQuery(e.target.value)}
           />
@@ -153,7 +153,7 @@ const App = () => {
             </div>
           </dl>
 
-          <p className='quoteDate'>Last updated {formatDate(stock.t)}</p>
+          <p className='quoteDate'>Last updated: {formatDate(stock.t)}</p>
         </section>
       )}
 
