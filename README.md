@@ -10,5 +10,5 @@ Tech stack considered:
 
   To do:
   - Landing/Home page for user to search stocks ✅
-  - Retrieve stock information from external API upon user search
+  - Retrieve stock information from external API upon user search ✅
     
